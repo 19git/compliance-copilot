@@ -1,0 +1,18 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+recursive-include templates *.html
+recursive-include examples/templates *
+recursive-include docs *
+graft src/compliance_copilot/output
+graft src/compliance_copilot/observability
+graft src/compliance_copilot/connectors
+graft src/compliance_copilot/engine
+graft src/compliance_copilot/utils
+graft src/compliance_copilot/scheduler.py
+graft src/compliance_copilot/notifier.py
+global-exclude *.pyc
+global-exclude __pycache__
+include src/compliance_copilot/config/defaults.yaml
+graft src/compliance_copilot/config

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "compliance-copilot"
-version = "0.1.0-alpha"
+version = "0.1.2a0"
 description = "A modular compliance rule engine for automated audits"
 readme = "README.md"
 authors = [
