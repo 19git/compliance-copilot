@@ -1,0 +1,56 @@
+# Compliance Copilot Configuration with Alerts
+# Copy to config.yaml and fill in your values
+
+engine:
+  debug: false
+  max_violations_per_rule: 1000
+  timeout_seconds: 30
+
+connectors:
+  csv:
+    delimiter: auto
+    encoding: utf-8
+  excel:
+    sheet_name: 0
+  pdf:
+    extract_tables: false
+
+output:
+  console:
+    colorize: true
+    show_violations: true
+  json:
+    pretty: true
+    include_violations: true
+  csv:
+    include_headers: true
+
+logging:
+  level: INFO
+  directory: logs
+
+cache:
+  enabled: true
+  directory: cache
+  ttl_seconds: 3600
+
+# Alert Configuration
+alerts:
+  email:
+    smtp_host: "smtp.gmail.com"
+    smtp_port: 587
+    username: "your-email@gmail.com"
+    password: "your-app-password"
+    from_addr: "compliance@yourcompany.com"
+    to_addrs:
+      - "security-team@yourcompany.com"
+      - "compliance-officer@yourcompany.com"
+  
+  slack:
+    webhook_url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+
+rules_directories:
+  - rules
+data_directories:
+  - data
+output_directory: output

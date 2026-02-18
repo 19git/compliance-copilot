@@ -1,0 +1,41 @@
+# Compliance Copilot Configuration
+# Copy to config.yaml and modify for your needs
+
+engine:
+  debug: false
+  max_violations_per_rule: 1000
+  timeout_seconds: 30
+
+connectors:
+  csv:
+    delimiter: auto
+    encoding: utf-8
+  excel:
+    sheet_name: 0
+  pdf:
+    extract_tables: false
+
+output:
+  console:
+    colorize: true
+    show_violations: true
+  json:
+    pretty: true
+    include_violations: true
+  csv:
+    include_headers: true
+
+logging:
+  level: INFO
+  directory: logs
+
+cache:
+  enabled: true
+  directory: cache
+  ttl_seconds: 3600
+
+rules_directories:
+  - rules
+data_directories:
+  - data
+output_directory: output

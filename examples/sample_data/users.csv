@@ -1,0 +1,5 @@
+username,mfa_enabled,role,last_login
+alice@example.com,true,admin,2024-02-15
+bob@example.com,false,user,2024-02-14
+charlie@example.com,true,user,2024-02-16
+diana@example.com,false,admin,2024-02-13

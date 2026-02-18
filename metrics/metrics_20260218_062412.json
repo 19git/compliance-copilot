@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-02-18T06:24:12.998413",
+  "uptime_seconds": 0.013227,
+  "counters": {
+    "scans_run": 1,
+    "rule_failed[rule=MFA-001]": 1,
+    "violations": 1,
+    "rule_passed[rule=LOGIN-001]": 1,
+    "reports_generated[format=html]": 1
+  },
+  "gauges": {
+    "rules_executed": 2,
+    "rules_passed": 1,
+    "rules_failed": 1,
+    "rules_errors": 0
+  },
+  "timers": {
+    "rule_execution_total": {
+      "count": 1,
+      "min_ms": 6.711916998028755,
+      "max_ms": 6.711916998028755,
+      "avg_ms": 6.711916998028755,
+      "total_ms": 6.711916998028755,
+      "p95_ms": null
+    }
+  }
+}

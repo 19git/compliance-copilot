@@ -1,0 +1,15 @@
+rules:
+  - id: "MFA-001"
+    name: "MFA Required for Admins"
+    description: "All admin users must have MFA enabled"
+    condition: "mfa_enabled == True"
+    data_source: "users.csv"
+    filter: "role == 'admin'"
+    severity: "HIGH"
+
+  - id: "LOGIN-001"
+    name: "Recent Login Required"
+    description: "Users must have logged in within 30 days"
+    condition: "last_login > '2024-01-15'"
+    data_source: "users.csv"
+    severity: "MEDIUM"

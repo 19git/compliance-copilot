@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-02-18T06:24:13.319738",
+  "uptime_seconds": 0.007926,
+  "counters": {
+    "scans_run": 1,
+    "rule_failed[rule=MFA-001]": 1,
+    "violations": 1,
+    "rule_passed[rule=LOGIN-001]": 1,
+    "reports_generated[format=json]": 1,
+    "reports_generated[format=csv]": 1,
+    "reports_generated[format=html]": 1
+  },
+  "gauges": {
+    "rules_executed": 2,
+    "rules_passed": 1,
+    "rules_failed": 1,
+    "rules_errors": 0
+  },
+  "timers": {
+    "rule_execution_total": {
+      "count": 1,
+      "min_ms": 2.528124998207204,
+      "max_ms": 2.528124998207204,
+      "avg_ms": 2.528124998207204,
+      "total_ms": 2.528124998207204,
+      "p95_ms": null
+    }
+  }
+}

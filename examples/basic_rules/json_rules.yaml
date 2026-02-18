@@ -1,0 +1,13 @@
+rules:
+  - id: "MFA-001"
+    name: "MFA Required for Admins"
+    condition: "mfa_enabled == True"
+    data_source: "users.json"
+    filter: "role == 'admin'"
+    severity: "HIGH"
+
+  - id: "LOGIN-001"
+    name: "Recent Login Required"
+    condition: "last_login > '2024-01-15'"
+    data_source: "users.json"
+    severity: "MEDIUM"

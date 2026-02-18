@@ -1,0 +1,6 @@
+[
+    {"username": "alice@example.com", "mfa_enabled": true, "role": "admin", "last_login": "2024-02-15"},
+    {"username": "bob@example.com", "mfa_enabled": false, "role": "user", "last_login": "2024-02-14"},
+    {"username": "charlie@example.com", "mfa_enabled": true, "role": "user", "last_login": "2024-02-16"},
+    {"username": "diana@example.com", "mfa_enabled": false, "role": "admin", "last_login": "2024-02-13"}
+]

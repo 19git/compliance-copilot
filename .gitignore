@@ -1,0 +1,31 @@
+# Python cache files - these are compiled bytecode files Python creates
+# They're machine-specific and shouldn't be in git
+__pycache__/
+*.pyc
+
+# Virtual environment - contains all dependencies, too big for git
+.venv/
+venv/
+env/
+
+# Environment variables - contains secrets! NEVER commit this
+.env
+
+# IDE settings - your personal editor config
+.vscode/
+.idea/
+
+# Test outputs
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Our app's data
+logs/
+output/
+cache/
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db

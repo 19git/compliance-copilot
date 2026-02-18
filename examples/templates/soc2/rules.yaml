@@ -1,0 +1,31 @@
+# SOC2 Trust Services Criteria
+# Focus: Security, Availability, Processing Integrity, Confidentiality, Privacy
+
+rules:
+  - id: "SOC2-CC6.1"
+    name: "Access Control Policy"
+    description: "Logical access controls must restrict access to authorized users."
+    condition: "access_level in ['admin', 'manager'] or (department == 'IT' and access_level == 'user')"
+    data_source: "users.csv"
+    severity: "HIGH"
+
+  - id: "SOC2-CC6.6"
+    name: "Encryption of Sensitive Data"
+    description: "Sensitive data must be encrypted at rest and in transit."
+    condition: "encryption_enabled == true"
+    data_source: "systems.csv"
+    severity: "CRITICAL"
+
+  - id: "SOC2-CC7.1"
+    name: "Security Event Logging"
+    description: "Security events (logins, changes) must be logged."
+    condition: "logging_enabled == true"
+    data_source: "systems.csv"
+    severity: "MEDIUM"
+
+  - id: "SOC2-CC8.1"
+    name: "Change Management"
+    description: "Changes to production systems require approval."
+    condition: "change_approved == true or environment != 'production'"
+    data_source: "changes.csv"
+    severity: "HIGH"
